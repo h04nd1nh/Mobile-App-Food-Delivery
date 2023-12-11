@@ -10,5 +10,7 @@ router.put('/login' , userController.loginHandle);
 
 router.get('/order' , userController.getOrder);
 
+router.get('/cart' , userController.getCart);
+
 
 module.exports = router;

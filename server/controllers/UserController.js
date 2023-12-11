@@ -1,4 +1,4 @@
-const { User, Order } = require("../model/model");
+const { User, Order, Cart } = require("../model/model");
 const crypto = require('crypto');
 
 const userController = {
@@ -82,10 +82,52 @@ const userController = {
           userID: user._id.toString(),
         })
         console.log(user._id.toString());
-        if (order) {
+        if (!order.length == 0)  {
           res.status(200).json(order);
         } else {
           res.status(404).json({ message: "The user has no orders" });
+        }
+
+      } else {
+        // User does not exis
+        res.status(404).json({ message: "User does not exist" });
+      }
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  },
+
+  //get Cart 
+  getCart: async (req, res) => {
+
+    try {
+      const user = await User.findOne({
+        token: req.query.token,
+      });
+      if (user) {
+        // User found
+        const cart = await Cart.find({
+          userID: user._id.toString(),
+        })
+        console.log(user._id.toString());
+        if (!cart.length == 0) {
+
+          const data = [];
+          var itemNumber = 1;
+          cart[0].items.forEach((item) => {
+            data.push({
+              id: itemNumber,
+              name: item.itemName,
+              variation: item.variation,
+              quantity: item.quantity,
+              price: item.price
+            })
+            itemNumber+=1;
+          })
+
+          res.status(200).json(data);
+        } else {
+          res.status(404).json({ message: "The Cart user has no items" });
         }
 
       } else {
