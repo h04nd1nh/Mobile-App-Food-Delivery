@@ -1,5 +1,5 @@
 # INTRODUCTION 
-A Simple Mobile App Food Delivery Using React Native framwork in Client and Node.js, Express.js in Server
+A Simple Mobile App Food Delivery Using React Native framework in Client and Node.js, Express.js in Server
 
 # UI PREVIEW
 ## Welcome
