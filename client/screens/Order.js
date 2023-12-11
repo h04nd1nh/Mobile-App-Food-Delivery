@@ -11,6 +11,7 @@ import  { getUserToken }  from '../context/UserToken';
 const Order = () => {
   const navigation = useNavigation();
   const [userData, setUserData] = useState([]);
+  const [orderData, setOrderData] = useState([]);
 
     useLayoutEffect(() => {
         navigation.setOptions({
@@ -34,6 +35,17 @@ const Order = () => {
           });
           const user = await userData.json();
           setUserData(user)
+
+          const orderData = await fetch(`http://192.168.0.107:8000/user/order?token=${encodeURIComponent(userToken)}`, {
+            method: "GET",
+            headers: {
+              'Accept': 'application/json',
+              'Content-type': 'application/json'
+            }
+          });
+          const order = await orderData.json();
+          setOrderData(order);
+
         } catch (error) {
           console.error("Error fetching data:", error);
         }
@@ -51,8 +63,8 @@ const Order = () => {
 
       <View className="mt-10 items-center">
         <FlatList
-          data={orderData.orders} // Sử dụng data từ Order.json
-          keyExtractor={(item) => item.orderId.toString()}
+          data={orderData} 
+          keyExtractor={(item) => item._id.toString()}
           renderItem={({ item }) => (
             <OrderCard
               OrderID={item.orderId}

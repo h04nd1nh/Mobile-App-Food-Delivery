@@ -8,5 +8,7 @@ router.post('/signup' , userController.signupHandle);
 router.put('/login' , userController.loginHandle);
 
 
+router.get('/order' , userController.getOrder);
+
 
 module.exports = router;

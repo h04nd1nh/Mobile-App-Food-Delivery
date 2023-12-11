@@ -30,10 +30,27 @@ const cateSchema = new mongoose.Schema({
   productIds: [String]
 });
 
+const orderItemSchema = new mongoose.Schema({
+  itemId: { type: String, required: true },
+  variationId: { type: String, default: null},
+  itemName: { type: String, required: true },
+  quantity: { type: Number, required: true },
+  price: { type: Number, required: true },
+});
+
+const orderSchema = new mongoose.Schema({
+  userID: { type: String, required: true},
+  orderName: { type: String, required: true},
+  time: { type: String, required:true},
+  orderStatus: {type: String, require: true},
+  items: [orderItemSchema],
+});
+
 
 
 let Food = mongoose.model("Food", foodSchema, "Food");
 let User = mongoose.model("User", userSchema, "users");
 let Category = mongoose.model("Category", cateSchema, "categories");
+let Order = mongoose.model("Order", orderSchema, "orders");
 
-module.exports = { Food, User, Category };
+module.exports = { Food, User, Category, Order};

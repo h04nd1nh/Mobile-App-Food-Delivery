@@ -1,4 +1,4 @@
-const { User } = require("../model/model");
+const { User, Order } = require("../model/model");
 const crypto = require('crypto');
 
 const userController = {
@@ -68,6 +68,34 @@ const userController = {
       res.status(500).json(err);
     }
   },
+
+  // Get Order 
+  getOrder: async (req, res) => {
+
+    try {
+      const user = await User.findOne({
+        token: req.query.token,
+      });
+      if (user) {
+        // User found
+        const order = await Order.find({
+          userID: user._id.toString(),
+        })
+        console.log(user._id.toString());
+        if (order) {
+          res.status(200).json(order);
+        } else {
+          res.status(404).json({ message: "The user has no orders" });
+        }
+
+      } else {
+        // User does not exis
+        res.status(404).json({ message: "User does not exist" });
+      }
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  }
 };
 
 module.exports = userController;
