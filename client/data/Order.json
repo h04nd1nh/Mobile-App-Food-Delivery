@@ -1,0 +1,43 @@
+{
+    "orders": [
+      {
+        "orderId": "PP091123-1",
+        "time": "09/11/2023 11:25",
+        "orderStatus": "Đã giao hàng",
+        "items": [
+          {
+            "itemId": "101",
+            "itemName": "Product A",
+            "quantity": 2,
+            "price": 15.99
+          },
+          {
+            "itemId": "102",
+            "itemName": "Product B",
+            "quantity": 1,
+            "price": 12.49
+          }
+        ]
+      },
+      {
+        "orderId": "PP091123-2",
+        "time": "09/11/2023 18:09",
+        "orderStatus": "Đang chuẩn bị",
+        "items": [
+          {
+            "itemId": "103",
+            "itemName": "Product C",
+            "quantity": 3,
+            "price": 8.75
+          },
+          {
+            "itemId": "104",
+            "itemName": "Product D",
+            "quantity": 1,
+            "price": 20.99
+          }
+        ]
+      }
+      
+    ]
+  }

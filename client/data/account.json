@@ -1,0 +1,28 @@
+{
+    "accounts": [
+      {
+        "id": 1,
+        "phone": "0971182176",
+        "firstName": "Hoan",
+        "lastName": "Dinh",
+        "email": "john.doe@example.com",
+        "password": "123456"
+      },
+      {
+        "id": 2,
+        "phone": "9876543210",
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "email": "jane.smith@example.com",
+        "password": "password2"
+      },
+      {
+        "id": 3,
+        "phone": "5555555555",
+        "firstName": "Alice",
+        "lastName": "Johnson",
+        "email": "alice.johnson@example.com",
+        "password": "password3"
+      }
+    ]
+  }

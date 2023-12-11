@@ -1,0 +1,150 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "1 Miếng gà giòn",
+        "title": "Gà giòn cay/ Không cay",
+        "image": "https://api.popeyes.vn/api/v1/files/08072022_072235_1ggin2.jpg",
+        "price_primary": 37000,
+        "variation_name": "Tuỳ chọn loại gà",
+        "variations": [
+          {
+            "key": "GaGionCay",
+            "option": "Gà giòn cay",
+            "prices_add": 0
+          },
+          {
+            "key": "GaGionKhongCay",
+            "option": "Gà giòn không cay",
+            "prices_add": 0
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Chả cá rong biển",
+        "title": "Chả cá rong biển",
+        "image": "https://api.popeyes.vn/api/v1/files/Chacarongbien.png",
+        "price_primary": 37500,
+        "variation_name": "",
+        "variations": []
+      },
+      {
+        "id": 3,
+        "name": "Gà không xương (3 miếng)",
+        "title": "Gà không xương 3 miếng + 1 Sốt chấm Tự chọn",
+        "image": "https://api.popeyes.vn/api/v1/files/11072022_050849_Gkhngxng3ming.jpg",
+        "price_primary": 57000,
+        "variation_name": "Tuỳ chọn nước sốt",
+        "variations": [
+          {
+            "key": "SpicyMayo",
+            "option": "Spicy Mayo",
+            "prices_add": 0
+          },
+          {
+            "key": "Mayo",
+            "option": "Mayo",
+            "prices_add": 0
+          },
+          {
+            "key": "BBG",
+            "option": "Sốt BBG",
+            "prices_add": 0
+          },
+          {
+            "key": "Thousand",
+            "option": "Sốt Thousand",
+            "prices_add": 0
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Gà không xương (5 miếng)",
+        "title": "Gà không xương 5 miếng + 1 Sốt chấm Tự chọn",
+        "image": "https://api.popeyes.vn/api/v1/files/08072022_072318_gakhongxng5ming.jpg",
+        "price_primary": 57000,
+        "variation_name": "Tuỳ chọn nước sốt",
+        "variations": [
+          {
+            "key": "SpicyMayo",
+            "option": "Spicy Mayo",
+            "prices_add": 0
+          },
+          {
+            "key": "Mayo",
+            "option": "Mayo",
+            "prices_add": 0
+          },
+          {
+            "key": "BBG",
+            "option": "Sốt BBG",
+            "prices_add": 0
+          },
+          {
+            "key": "Thousand",
+            "option": "Sốt Thousand",
+            "prices_add": 0
+          }
+        ]
+      },
+
+      {
+        "id": 5,
+        "name": "Burger Gà",
+        "title": "Burger Gà",
+        "image": "https://api.popeyes.vn/api/v1/files/08072022_073759_BurgerG.jpg",
+        "price_primary": 54500,
+        "variation_name": "Phần ăn chính",
+        "variations": [
+          {
+            "key": "BurgetCay",
+            "option": "Burger Gà Cay",
+            "prices_add": 0
+          },
+          {
+            "key": "BurgetKhongCay",
+            "option": "Burger Gà Không Cay",
+            "prices_add": 0
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Burger Cá",
+        "title": "Burger Cá",
+        "image": "https://api.popeyes.vn/api/v1/files/08072022_073823_BurgerC.jpg",
+        "price_primary": 53000,
+        "variation_name": "",
+        "variations": []
+      },
+      {
+        "id": 7,
+        "name": "Burget Tôm",
+        "title": "Burget Tôm",
+        "image": "https://api.popeyes.vn/api/v1/files/08072022_073823_BurgerC.jpg",
+        "price_primary": 54500,
+        "variation_name": "",
+        "variations": []
+      },
+      {
+        "id": 8,
+        "name": "Snack Mực",
+        "title": "Snack Mực",
+        "image": "https://api.popeyes.vn/api/v1/files/08072022_072154_snackmc.jpg",
+        "price_primary": 44000,
+        "variation_name": "",
+        "variations": []
+      },
+      {
+        "id": 9,
+        "name": "4 Miếng Snack Cá",
+        "title": "4 Miếng Snack Cá",
+        "image": "https://api.popeyes.vn/api/v1/files/08072022_072046_snackc.jpg",
+        "price_primary": 44000,
+        "variation_name": "",
+        "variations": []
+      }
+    ]
+  }

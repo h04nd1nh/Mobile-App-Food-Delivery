@@ -1,0 +1,24 @@
+{
+    "categories": [
+      {
+        "id": 1,
+        "name": "Món ngon phải thử",
+        "productIds": ["6571e077d066cad95280cfd8", "6571e6b9e0d422a107027c88" , "6571e6e4e0d422a107027c89" , "6571e72ae0d422a107027c8a"]
+      },
+      {
+        "id": 2,
+        "name": "Gà không lối thoát",
+        "productIds": ["6571e077d066cad95280cfd8","6571e6e4e0d422a107027c89","6571e72ae0d422a107027c8a"]
+      },
+      {
+        "id": 3,
+        "name": "Burger",
+        "productIds": ["6571e731e0d422a107027c8b","6571e73ee0d422a107027c8c","6571e747e0d422a107027c8d"]
+      },
+      {
+        "id": 4,
+        "name": "Món ăn nhẹ",
+        "productIds": ["6571e6b9e0d422a107027c88","6571e753e0d422a107027c8e","6571e75ee0d422a107027c8f"]
+      }
+    ]
+  }
