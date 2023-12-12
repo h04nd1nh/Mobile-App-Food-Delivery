@@ -1,13 +1,14 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native'
 import { TailwindProvider } from "tailwindcss-react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Icon from 'react-native-vector-icons/Ionicons';
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useLayoutEffect, useState, useEffect } from 'react';
 import BottomSheetLayout from "../components/BottomSheetLayout";
+import { getUserToken } from "../context/UserToken"
 
 
 
@@ -28,6 +29,7 @@ const Tab = createBottomTabNavigator();
 
 const Direction = () => {
   const [bottomSheetVisible, setBottomSheetVisible] = useState(false);
+  const [cartQuantity, setCartQuantity] = useState();
 
   const openBottomSheet = () => {
     setBottomSheetVisible(true);
@@ -44,6 +46,32 @@ const Direction = () => {
             headerShown: false,
         })
     },[]);
+
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          //Get user by token
+          const userToken = await getUserToken();
+          const userCartQuantity = await fetch(
+            `http://192.168.0.107:8000/user/cart/quantity?token=${encodeURIComponent(userToken)}`,
+            {
+              method: "GET",
+              headers: {
+                Accept: "application/json",
+                "Content-type": "application/json",
+              },
+            }
+          );
+          const data = await userCartQuantity.json();
+          setCartQuantity(data.quantity);
+
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      };
+  
+      fetchData();
+    }, []);
   return (
     <TailwindProvider>
         <Tab.Navigator 
@@ -92,7 +120,7 @@ const Direction = () => {
           <View className="flex-row">
             <Icon  name="cart" android="md-add" size={30}  color="#fff"/>
             <View className="w-[30px] h-[30px] bg-white items-center justify-center rounded-full mx-2">
-              <Text className="text-[18px] font-extrabold">0</Text>
+              <Text className="text-[18px] font-extrabold">{cartQuantity}</Text>
             </View>
           </View>
         </TouchableOpacity>

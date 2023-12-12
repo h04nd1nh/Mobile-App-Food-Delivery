@@ -47,7 +47,7 @@ const ProductCart = ({data}) => {
                     <Text>Xoá</Text>
                 </TouchableOpacity>
             </View>
-            <Text className="text-[20px] text-[#000000] font-bold">{data.quantity*data.price}đ</Text>
+            <Text className="text-[20px] text-[#000000] font-bold">{(data.quantity*data.price).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}đ</Text>
         </View>
     );
 };

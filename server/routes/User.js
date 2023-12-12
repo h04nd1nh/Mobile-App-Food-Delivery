@@ -12,5 +12,7 @@ router.get('/order' , userController.getOrder);
 
 router.get('/cart' , userController.getCart);
 
+router.get('/cart/quantity' , userController.getCartQuantity);
+
 
 module.exports = router;

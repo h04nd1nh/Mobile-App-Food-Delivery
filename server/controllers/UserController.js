@@ -137,6 +137,41 @@ const userController = {
     } catch (err) {
       res.status(500).json(err);
     }
+  },
+
+  // Get Cart quantity
+  getCartQuantity: async (req, res) => {
+
+    try {
+      const user = await User.findOne({
+        token: req.query.token,
+      });
+      if (user) {
+        // User found
+        const cart = await Cart.find({
+          userID: user._id.toString(),
+        })
+        console.log(user._id.toString());
+        if (!cart.length == 0) {
+
+          
+          var itemNumber = 0;
+          cart[0].items.forEach(() => {
+            itemNumber+=1;
+          })
+
+          res.status(200).json({quantity: itemNumber});
+        } else {
+          res.status(404).json({ message: "The Cart user has no items" });
+        }
+
+      } else {
+        // User does not exis
+        res.status(404).json({ message: "User does not exist" });
+      }
+    } catch (err) {
+      res.status(500).json(err);
+    }
   }
 };
 
