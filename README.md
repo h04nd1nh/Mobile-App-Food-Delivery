@@ -16,6 +16,10 @@ A Simple Mobile App Food Delivery Using React Native framework in Client and Nod
 ## Order
 ![image](https://github.com/h04nd1nh/Mobile-App-Food-Delivery/assets/77616433/760877ef-663d-42fe-bece-9f1784ba896b)
 
+## Cart && Checkout
+![image](https://github.com/h04nd1nh/Mobile-App-Food-Delivery/assets/77616433/39ba9eca-bbdc-437d-b006-8c70d74d4561)
+
+
 ## Detail
 ![image](https://github.com/h04nd1nh/Mobile-App-Food-Delivery/assets/77616433/1c6b96da-7250-425d-9104-8c101b85f455)
 
