@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState, useEffect } from 'react';
-import { Text, TextInput, View, TouchableOpacity } from 'react-native';
+import { Text, TextInput, View, TouchableOpacity, ToastAndroid } from 'react-native';
 import  AuthService  from '../context/AuthService';
 
 const Login = () => {
@@ -15,6 +15,11 @@ const Login = () => {
       const success = await AuthService.authenticateUser(phone, password);
 
       if (success) {
+        ToastAndroid.show(
+          `Đăng nhập thành công`,
+          ToastAndroid.SHORT,
+          ToastAndroid.TOP,
+        );
         navigation.navigate('Direction');
       } else {
         setLoginNotice("Thông tin đăng nhập hoặc mật khẩu không chính xác");

@@ -40,7 +40,7 @@ const itemSchema = new mongoose.Schema({
 
 const orderSchema = new mongoose.Schema({
   userID: { type: String, required: true},
-  orderName: { type: String, required: true},
+  orderId: { type: String, required: true},
   time: { type: String, required:true},
   orderStatus: {type: String, require: true},
   items: [itemSchema],
