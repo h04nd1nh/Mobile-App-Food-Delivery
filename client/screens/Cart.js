@@ -92,7 +92,7 @@ const Cart = ({ onOrderPlaced }) => {
           ToastAndroid.TOP,
         );
 
-        navigation.navigate('Account')
+        // navigation.navigate('Direction')
       }
     }
 
